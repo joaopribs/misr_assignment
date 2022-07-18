@@ -147,7 +147,7 @@ Request body sample:
 }
 ```
 
-* Delete Plot of Land**: `DELETE http://localhost:8085/plots_of_land/{id}`
+* **Delete Plot of Land**: `DELETE http://localhost:8085/plots_of_land/{id}`
 
 
 ### Irrigation System
@@ -161,3 +161,7 @@ Request body sample:
 ## Unit Tests
 
 There are 30 unit tests, giving a coverage of 93% classes, 93% lines covered. To run the tests, use this command: `./mvnw test`
+
+## How to communicate with the IoT devices
+
+The idea of how the IoT devices would communicate with the system is that for each plot of land, the system would send the amount of water and time slots. This can be achieved using the Start/Stop Irrigation API endpoints, which take the Plot of Land ID as a parameter. 
