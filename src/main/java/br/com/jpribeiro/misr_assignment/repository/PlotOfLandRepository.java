@@ -13,6 +13,9 @@ public interface PlotOfLandRepository extends JpaRepository<PlotOfLand, Integer>
      * This SQL calculates the ratio between sum of time slots and the sum of amount of water for all
      * plots of area that have a specific Area Type.
      *
+     * Doing this calculation on the database is more efficient than querying all records and doing the
+     * calculation on the Java side.
+     *
      * If the sum of time slots is null, or the sum of amount of water is null or zero, the function
      * returns 0 directly - this is useful when the user has created a new Area Type, but hasn't created
      * any Plots of Land for it yet.
